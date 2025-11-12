@@ -16,24 +16,28 @@ function App() {
     <div className="landing-page">
       {/* Hero Section */}
       <header className="hero">
-        <div className="hero-content">
-          <div className="logo-badge">⚡ MicroLearn</div>
-          <h1 className="hero-title">
-            Master New Skills in Just<br />
-            <span className="highlight">3 Minutes</span>
-          </h1>
-          <p className="hero-subtitle">
-            Bite-sized lessons designed for busy professionals who want to keep growing without sacrificing their schedule.
-          </p>
-          <div className="hero-stats">
-            <div className="stat">
-              <div className="stat-number">3 min</div>
-              <div className="stat-label">Per Lesson</div>
-            </div>
-            <div className="stat">
-              <div className="stat-number">∞</div>
-              <div className="stat-label">Skills to Learn</div>
-            </div>
+        <div className="hero-container">
+          <div className="hero-left">
+            <h1 className="hero-title">
+              MICRO-LEARNING APP<br />
+              FOR BUSY<br />
+              PROFESSIONALS
+            </h1>
+            <p className="hero-subtitle">
+              Delivering 3-minute lessons on<br />
+              skills like leadership, coding,<br />
+              and communication.
+            </p>
+            <button className="cta-button" onClick={() => document.getElementById('email-form')?.scrollIntoView({ behavior: 'smooth' })}>
+              GET FREE MINI COURSE
+            </button>
+          </div>
+          <div className="hero-right">
+            <img
+              src="/microlearning-web-app.png"
+              alt="MicroLearn App Interface"
+              className="hero-image"
+            />
           </div>
         </div>
       </header>
@@ -81,7 +85,7 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="cta-section" id="email-form">
         <div className="cta-content">
           <h2 className="cta-title">🎁 Start with a Free Mini Course</h2>
           <p className="cta-subtitle">
@@ -119,6 +123,9 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2025 MicroLearn. Built for busy professionals who never stop growing.</p>
+        <p className="image-credit">
+          Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Grey</a> on <a href="https://unsplash.com/photos/assorted-books-on-wooden-table-eMP4sYPJ9x0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
+        </p>
       </footer>
     </div>
   )
