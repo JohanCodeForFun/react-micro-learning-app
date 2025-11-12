@@ -19,8 +19,8 @@ function App() {
         <div className="hero-container">
           <div className="hero-left">
             <h1 className="hero-title">
-              MICRO-LEARNING APP<br />
-              FOR BUSY<br />
+              MICRO-LEARNING<br />
+              APP --&gt; FOR BUSY<br />
               PROFESSIONALS
             </h1>
             <p className="hero-subtitle">
