@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# MicroLearn Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A demo landing page for a micro-learning platform targeting busy professionals aged 25-40. This project is designed for **demonstration and practice purposes**, specifically for learning AWS CodePipeline and CI/CD workflows.
 
-Currently, two official plugins are available:
+## 🎯 Project Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This landing page showcases:
 
-## React Compiler
+- **Product Concept**: MicroLearn - 3-minute skill lessons with gamification
+- **Target Audience**: Busy professionals who want continuous upskilling
+- **Key Features**: Leadership, coding, and communication micro-lessons
+- **Landing Page Test**: Free "Mini Course of the Week" email opt-in
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Custom CSS with modern gradients and animations
+- **Deployment Target**: AWS (via CodePipeline)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 AWS CodePipeline Practice
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project serves as a hands-on learning environment for:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Setting up AWS CodePipeline for React applications
+- Configuring automated build and deployment workflows
+- Practicing CI/CD best practices in AWS
+- Integrating with AWS services (S3, CloudFront, etc.)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm/yarn
+- AWS account (for deployment practice)
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is configured for deployment via AWS CodePipeline. The typical workflow includes:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Source Stage**: Code is pulled from repository
+2. **Build Stage**: Vite builds the production bundle
+3. **Deploy Stage**: Artifacts deployed to AWS S3/CloudFront
+
+### Build Output
+
+The production build outputs to the `dist/` directory and includes:
+
+- Optimized React bundle
+- Minified CSS
+- Static assets
+
+## 📁 Project Structure
+
 ```
+src/
+├── App.tsx          # Main landing page component
+├── App.css          # Landing page styles
+├── index.css        # Global styles
+└── main.tsx         # Application entry point
+```
+
+## 🎨 Features
+
+- **Responsive Design**: Mobile-first approach
+- **Modern UI**: Gradient backgrounds, smooth animations
+- **Email Capture**: Form validation for lead generation
+- **Accessibility**: Focus states and semantic HTML
+
+## 📝 Notes
+
+This is a **practice/demo project** for:
+
+- Learning AWS deployment workflows
+- Testing CodePipeline configurations
+- Experimenting with React + Vite + TypeScript
+- Validating landing page conversion patterns
+
+Not intended for production use without further development and testing.
