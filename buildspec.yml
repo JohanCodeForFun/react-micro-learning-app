@@ -1,20 +1,22 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - node -v
+      - npm -v
+      - npm ci
   pre_build:
     commands:
       - echo Installing dependencies...
-      - npm install
   build:
     commands:
       - echo Build started on `date`
       - npm run build
-      - echo Build completed on `date`
+
 artifacts:
   files:
     - "**/*"
   base-directory: dist
-  name: build-output
-cache:
-  paths:
-    - "node_modules/**/*"
