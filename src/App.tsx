@@ -16,10 +16,10 @@ function App() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-container">
-          <div className="nav-logo">
+          <a href="#" className="nav-logo">
             <span className="logo-icon">⚡</span>
             <span className="logo-text">MicroLearn</span>
-          </div>
+          </a>
           <div className="nav-links">
             <a href="#features">Features</a>
             <a href="#topics">Topics</a>
