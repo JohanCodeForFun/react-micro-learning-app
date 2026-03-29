@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - node -v
+      - npm -v
+      - npm ci
+  build:
+    commands:
+      - echo Running tests...
+      - npm run test:run
