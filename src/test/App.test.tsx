@@ -39,7 +39,7 @@ describe('Navbar', () => {
 describe('Hero section', () => {
     it('renders the main headline', () => {
         renderApp()
-        expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Learn Any Skill in')
+        expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Learn three Skills in')
     })
 
     it('renders the gradient "3 Minutes a Day" span', () => {

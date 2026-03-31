@@ -34,7 +34,7 @@ function App() {
           <div className="hero-left">
             <div className="hero-badge">✨ New lessons every week</div>
             <h1 className="hero-title">
-              Learn Any Skill in<br />
+              Learn three Skills in<br />
               <span className="gradient-text">3 Minutes a Day</span>
             </h1>
             <p className="hero-subtitle">
